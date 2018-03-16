@@ -6,8 +6,8 @@ RUN apt-get update -y &&\
     apt-get install -y nodejs build-essential &&\
     npm install -g newman &&\
     curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh &&\
-    curl "https://bootstrap.pypa.io/get-pip.py" -o "/work/get-pip.py" &&\
-    python /work/get-pip.py &&\
+    curl "https://bootstrap.pypa.io/get-pip.py" -o "/get-pip.py" &&\
+    python /get-pip.py &&\
     pip install awscli
 
 ADD dynamodb_local_latest.tar.gz /work/
